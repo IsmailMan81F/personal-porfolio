@@ -1,0 +1,85 @@
+am ismail meguehout, software engineer, make websites, mobile apps, desktop apps, ai automations,
+help businesses grow online + make their work easier 
+
+studying at the high national school of computer science ESI, the year 3/5, attended to have the computer science engineering certificate, 
+
+
+
+for my parcours, i got my bacalurate with 18.65 in algeria in july 2024
+i joined the ESI in october 2024
+get familiar with the computer science basics (linux, problem solving ...) at 2025
+worked as a backend engineer at the sahla farm project in february 2026 
+start freelancing at august 2026
+
+got 3 satisfied clients 
+
+
+for the list of projects, 
+each project card should contain the image, the title, the description, the preview link, the github link
+
+for the projects we have: 
+odelice officiel website 
+a fast food website that showcase .... (make the descriptions from yours)
+the link : https://www.odelice.site
+the github link : https://github.com/IsmailMan81F/odelice-website
+
+chicken vibe website : 
+a fast food ... (change the description formulat so that they appear different ...)
+the link : https://chickenvibe.vercel.app
+the github link : https://github.com/IsmailMan81F/chickenvibe
+
+hellfire :
+also a fast food shop ...
+the link : hellfire-burger.vercel.app
+the github link : https://github.com/IsmailMan81F/hellfire-burger
+
+KORD site ecommerce : 
+an ecommerce website with products, categories ...., with adming pannel ...
+the link : https://ecom-website-beta-version.vercel.app/
+the github : https://github.com/IsmailMan81F/ecommerce-website
+
+
+sahla farm backend : 
+here is a quick description about it (summarize it) : for an iot project (a box taht records the ground data (temp ...)) and then send it to the ai agent that reads this data and then make actions on the actuators
+
+link : https://sahla-farm-website.vercel.app/
+github link : https://github.com/IsmailMan81F/SAHLA_FARM_BACKEND
+
+for each project you'll find a thumbnail for it in the /assets folder
+
+
+for the social media : 
+
+instagram : https://www.instagram.com/ismail_meg81f/
+facebook : https://web.facebook.com/ismail.meguehout
+whatsapp : +213 658 33 17 37
+phone numbers : 0658331737 0563443980
+
+
+
+for the location, jijel, in algeria
+
+
+for the logo, make it a Dev. 
+
+
+use the design system in DESIGN.md, exactly the same font family ...
+make hte project using react with typescript and tailwindcss 
+downlaod all the shadcn needed ui elements
+ and react icons for any needed icons
+
+don't use emojies
+don't use gradients 
+no dot badges
+no dense text
+make it clean, with good visual spacing, just follow what is in the given desing system
+
+
+add both dark them, and light theme
+make the whole website in english
+
+
+make it fully responsive
+in mobile screens,
+make the navigation containing only the logo + hamuber menu 
+when opening the hamburger menu don't forget to make a working correct animation
