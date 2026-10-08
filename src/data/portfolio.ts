@@ -29,7 +29,7 @@ export interface Service {
 
 export const PERSONAL_INFO = {
   name: "Ismail Meguehout",
-  shortName: "Dev.",
+  shortName: "Ismail.",
   role: "Software Engineer",
   institution: "High National School of Computer Science (ESI)",
   yearOfStudy: "Year 3 of 5 — State Engineering Degree in Computer Science",

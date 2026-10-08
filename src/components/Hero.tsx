@@ -4,18 +4,19 @@ import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative pt-20 md:pt-28 pb-20 md:pb-32 bg-gallery-white overflow-hidden text-center">
+    <section id="hero" className="relative pt-8 md:pt-12 pb-16 md:pb-24 bg-gallery-white overflow-hidden text-center">
       <div className="max-w-[1024px] mx-auto px-6">
-        {/* Prominent Name & Identity Kicker (Highly appearing per user request) */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-studio-mist dark:bg-paper-frost border border-hairline-silver/60 dark:border-hairline-silver/30 mb-6">
-          <span className="text-[14px] sm:text-[15px] font-semibold text-ink tracking-tight">
-            {PERSONAL_INFO.name}
-          </span>
-          <span className="text-slate/40 text-[12px]">•</span>
-          <span className="text-[12px] sm:text-[13px] font-medium text-slate">
-            ESI Algiers (Year 3/5)
+        {/* Launch status annotation per DESIGN.md */}
+        <div className="inline-block mb-3">
+          <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase">
+            Available for Select Client Engagements & Engineering Roles
           </span>
         </div>
+
+        {/* Product Kicker / Role Tagline */}
+        <p className="text-[19px] md:text-[21px] font-semibold text-ink tracking-[0.231px] mb-3">
+          {PERSONAL_INFO.role} & Systems Builder
+        </p>
 
         {/* Hero Display Headline (80px/600 with tightened -1.2px tracking) */}
         <h1 className="text-[44px] sm:text-[62px] md:text-[80px] font-semibold text-ink leading-[1.05] tracking-[-1.2px] max-w-[920px] mx-auto mb-6">
