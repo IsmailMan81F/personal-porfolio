@@ -20,7 +20,7 @@ export const ContactSection: React.FC = () => {
           <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
             Inquiries & Collaboration
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-semibold text-ink leading-tight tracking-tight mb-4">
+          <h2 className="text-[36px] md:text-[48px] font-bold text-ink leading-tight tracking-tight mb-4">
             Let's build something enduring.
           </h2>
           <p className="text-[17px] text-slate leading-[1.47] tracking-[-0.374px]">

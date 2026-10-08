@@ -20,7 +20,7 @@ export const ProjectsSection: React.FC = () => {
             <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
               Featured Portfolio
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-semibold text-ink leading-tight tracking-tight">
+            <h2 className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight">
               Engineered with precision. Built for impact.
             </h2>
             <p className="text-[17px] text-slate mt-2 max-w-[560px] tracking-[-0.374px]">

@@ -18,8 +18,8 @@ export const Hero: React.FC = () => {
           {PERSONAL_INFO.role} & Systems Builder
         </p>
 
-        {/* Hero Display Headline (80px/600 with tightened -1.2px tracking) */}
-        <h1 className="text-[44px] sm:text-[62px] md:text-[80px] font-semibold text-ink leading-[1.05] tracking-[-1.2px] max-w-[920px] mx-auto mb-6">
+        {/* Hero Display Headline */}
+        <h1 className="text-[44px] sm:text-[62px] md:text-[80px] font-bold text-ink leading-[1.05] tracking-[-1.5px] max-w-[940px] mx-auto mb-6">
           Architecting web, mobile, and autonomous systems.
         </h1>
 

@@ -10,7 +10,7 @@ export const TimelineSection: React.FC = () => {
           <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
             Academic & Professional Journey
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-semibold text-ink leading-tight tracking-tight">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight">
             From national honors to production software systems.
           </h2>
           <p className="text-[17px] text-slate mt-2 tracking-[-0.374px]">
