@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { PERSONAL_INFO } from '../data/portfolio';
 import { FiSun, FiMoon, FiMenu, FiX, FiArrowUpRight } from 'react-icons/fi';
+
+import { AnimatedLogo } from './AnimatedLogo';
 
 export const Navigation: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -18,12 +19,13 @@ export const Navigation: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-[20px] bg-white/80 dark:bg-black/80 border-b border-[#d6d6d6] dark:border-[#333336] transition-colors duration-200">
       <div className="max-w-[1024px] mx-auto px-6 h-[48px] flex items-center justify-between">
-        {/* Logo: Ismail. */}
+        {/* Animated Logo: Ismail. <-> Dev. */}
         <a
           href="#hero"
           className="flex items-center gap-1.5 font-semibold text-[18px] tracking-[-0.22px] text-[#1d1d1f] dark:text-[#f5f5f7] hover:opacity-80 transition-opacity"
+          aria-label="Ismail Meguehout - Home"
         >
-          <span className="font-bold text-[20px] tracking-tight">{PERSONAL_INFO.shortName}</span>
+          <AnimatedLogo />
         </a>
 
         {/* Desktop Navigation Links */}

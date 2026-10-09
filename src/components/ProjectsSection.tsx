@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { PROJECTS, type Project } from '../data/portfolio';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { ScrollRevealWords } from './ScrollRevealText';
+import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 export const ProjectsSection: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'web' | 'iot'>('all');
+  const containerRef = useRef<HTMLElement>(null);
+
+  useScrollAnimations(containerRef, { triggerKey: filter });
 
   const filteredProjects = PROJECTS.filter((p) => {
     if (filter === 'web') return p.category.includes('Web') || p.category.includes('Commerce');
@@ -12,27 +17,42 @@ export const ProjectsSection: React.FC = () => {
   });
 
   return (
-    <section id="projects" className="py-24 bg-studio-mist dark:bg-studio-mist transition-colors duration-200">
+    <section
+      id="projects"
+      ref={containerRef}
+      className="py-24 bg-studio-mist dark:bg-studio-mist transition-colors duration-200"
+    >
       <div className="max-w-[1024px] mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
+            <span
+              data-scroll-text
+              className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2 will-change-[opacity,transform]"
+            >
               Featured Portfolio
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight">
-              Engineered with precision. Built for impact.
-            </h2>
-            <p className="text-[17px] text-slate mt-2 max-w-[560px] tracking-[-0.374px]">
+            <ScrollRevealWords
+              as="h2"
+              text="Engineered with precision. Built for impact."
+              className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight"
+            />
+            <p
+              data-scroll-text
+              className="text-[17px] text-slate mt-2 max-w-[560px] tracking-[-0.374px] will-change-[opacity,transform]"
+            >
               Every solution combines performant architecture, refined aesthetics, and measurable business outcomes.
             </p>
           </div>
 
           {/* Filter Pills */}
-          <div className="flex items-center gap-2 self-start md:self-auto bg-gallery-white/60 dark:bg-paper-frost/60 p-1.5 rounded-full border border-hairline-silver/60">
+          <div
+            data-scroll-text
+            className="flex items-center gap-2 self-start md:self-auto bg-gallery-white/60 dark:bg-paper-frost/60 p-1.5 rounded-full border border-hairline-silver/60 will-change-[opacity,transform]"
+          >
             <button
               onClick={() => setFilter('all')}
-              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all ${
+              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all cursor-pointer ${
                 filter === 'all'
                   ? 'bg-ink text-gallery-white dark:bg-ink dark:text-gallery-white'
                   : 'text-slate hover:text-ink'
@@ -42,7 +62,7 @@ export const ProjectsSection: React.FC = () => {
             </button>
             <button
               onClick={() => setFilter('web')}
-              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all ${
+              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all cursor-pointer ${
                 filter === 'web'
                   ? 'bg-ink text-gallery-white dark:bg-ink dark:text-gallery-white'
                   : 'text-slate hover:text-ink'
@@ -52,7 +72,7 @@ export const ProjectsSection: React.FC = () => {
             </button>
             <button
               onClick={() => setFilter('iot')}
-              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all ${
+              className={`px-3.5 py-1 text-[12px] font-medium rounded-full transition-all cursor-pointer ${
                 filter === 'iot'
                   ? 'bg-ink text-gallery-white dark:bg-ink dark:text-gallery-white'
                   : 'text-slate hover:text-ink'
@@ -71,7 +91,8 @@ export const ProjectsSection: React.FC = () => {
             return (
               <article
                 key={project.id}
-                className="bg-gallery-white rounded-[28px] overflow-hidden border border-hairline-silver/50 transition-all duration-300 hover:border-hairline-silver flex flex-col lg:flex-row"
+                data-scroll-card
+                className="bg-gallery-white rounded-[28px] overflow-hidden border border-hairline-silver/50 transition-all duration-300 hover:border-hairline-silver flex flex-col lg:flex-row will-change-[opacity,transform]"
               >
                 {/* Media Container */}
                 <div
