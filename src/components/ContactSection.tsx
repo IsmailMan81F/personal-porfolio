@@ -1,14 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolio';
 import { FiPhone, FiMapPin, FiCheck, FiCopy, FiArrowUpRight } from 'react-icons/fi';
 import { FaWhatsapp, FaInstagram, FaFacebook, FaGithub } from 'react-icons/fa';
-import { ScrollRevealWords } from './ScrollRevealText';
-import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState<string | null>(null);
-  const containerRef = useRef<HTMLElement>(null);
-  useScrollAnimations(containerRef);
 
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
@@ -19,27 +15,18 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      ref={containerRef}
       className="py-24 bg-gallery-white transition-colors duration-200"
     >
       <div className="max-w-[1024px] mx-auto px-6">
         {/* Editorial Heading */}
         <div className="text-center max-w-[680px] mx-auto mb-16">
-          <span
-            data-scroll-text
-            className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2 will-change-[opacity,transform]"
-          >
+          <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
             Inquiries & Collaboration
           </span>
-          <ScrollRevealWords
-            as="h2"
-            text="Let's build something enduring."
-            className="text-[36px] md:text-[48px] font-bold text-ink leading-tight tracking-tight mb-4"
-          />
-          <p
-            data-scroll-text
-            className="text-[17px] text-slate leading-[1.47] tracking-[-0.374px] will-change-[opacity,transform]"
-          >
+          <h2 className="text-[36px] md:text-[48px] font-bold text-ink leading-tight tracking-tight mb-4">
+            Let's build something enduring.
+          </h2>
+          <p className="text-[17px] text-slate leading-[1.47] tracking-[-0.374px]">
             Whether you need a bespoke web platform, mobile solution, IoT data pipeline, or complete automation workflow, reach out directly.
           </p>
         </div>
@@ -47,10 +34,7 @@ export const ContactSection: React.FC = () => {
         {/* Contact Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Direct Channels Card */}
-          <div
-            data-scroll-card
-            className="bg-studio-mist dark:bg-studio-mist p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between will-change-[opacity,transform]"
-          >
+          <div className="bg-studio-mist dark:bg-studio-mist p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between">
             <div>
               <h3 className="text-[21px] font-semibold text-ink tracking-tight mb-2">
                 Direct Contact
@@ -123,10 +107,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Social Profiles & Networks Card */}
-          <div
-            data-scroll-card
-            className="bg-studio-mist dark:bg-studio-mist p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between will-change-[opacity,transform]"
-          >
+          <div className="bg-studio-mist dark:bg-studio-mist p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between">
             <div>
               <h3 className="text-[21px] font-semibold text-ink tracking-tight mb-2">
                 Online Profiles & Network
@@ -204,10 +185,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Footer */}
-        <footer
-          data-scroll-text
-          className="pt-12 border-t border-hairline-silver/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-slate will-change-[opacity,transform]"
-        >
+        <footer className="pt-12 border-t border-hairline-silver/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-slate">
           <div>
             © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
           </div>

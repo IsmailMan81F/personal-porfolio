@@ -1,35 +1,21 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { SERVICES } from '../data/portfolio';
-import { ScrollRevealWords } from './ScrollRevealText';
-import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 export const ServicesSection: React.FC = () => {
-  const containerRef = useRef<HTMLElement>(null);
-  useScrollAnimations(containerRef);
-
   return (
     <section
       id="services"
-      ref={containerRef}
       className="py-24 bg-studio-mist dark:bg-studio-mist transition-colors duration-200"
     >
       <div className="max-w-[1024px] mx-auto px-6">
         <div className="max-w-[680px] mb-16">
-          <span
-            data-scroll-text
-            className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2 will-change-[opacity,transform]"
-          >
+          <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
             Engineering Capabilities
           </span>
-          <ScrollRevealWords
-            as="h2"
-            text="How I assist growing companies & ventures."
-            className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight"
-          />
-          <p
-            data-scroll-text
-            className="text-[17px] text-slate mt-2 tracking-[-0.374px] will-change-[opacity,transform]"
-          >
+          <h2 className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight">
+            How I assist growing companies & ventures.
+          </h2>
+          <p className="text-[17px] text-slate mt-2 tracking-[-0.374px]">
             Delivering clean architecture from prototype to production, eliminating operational friction along the way.
           </p>
         </div>
@@ -39,8 +25,7 @@ export const ServicesSection: React.FC = () => {
           {SERVICES.map((service, index) => (
             <div
               key={service.id}
-              data-scroll-card
-              className="bg-gallery-white p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between hover:border-hairline-silver transition-all duration-200 will-change-[opacity,transform]"
+              className="bg-gallery-white p-8 sm:p-10 rounded-[28px] border border-hairline-silver/60 flex flex-col justify-between hover:border-hairline-silver transition-all duration-200"
             >
               <div>
                 <span className="text-[13px] font-semibold text-slate/80 tracking-tight block mb-4">
