@@ -4,14 +4,25 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 export const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="py-24 bg-studio-mist dark:bg-studio-mist">
+    <section
+      id="projects"
+      className="py-24 bg-studio-mist dark:bg-studio-mist transition-colors duration-200"
+    >
       <div className="max-w-[1024px] mx-auto px-6">
-        <div className="text-center max-w-[640px] mx-auto mb-16">
+        {/* Section Header */}
+        <div className="max-w-[680px] mb-16">
+          <span className="text-[12px] font-semibold text-launch-orange tracking-[-0.12px] uppercase block mb-2">
+            Featured Portfolio
+          </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-ink leading-tight tracking-tight">
-            Projects
+            Engineered with precision. Built for impact.
           </h2>
+          <p className="text-[17px] text-slate mt-2 max-w-[560px] tracking-[-0.374px]">
+            Every solution combines performant architecture, refined aesthetics, and measurable business outcomes.
+          </p>
         </div>
 
+        {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((project: Project) => (
             <article
