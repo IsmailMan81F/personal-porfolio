@@ -23,7 +23,8 @@ export const Hero: React.FC = () => {
 
         {/* Hero Display Headline */}
         <h1 className="text-[44px] sm:text-[62px] md:text-[76px] font-bold text-ink leading-[1.06] tracking-[-1.5px] max-w-[900px] mx-auto mb-8">
-          Architecting web, mobile, and autonomous systems.
+          <span className="sm:hidden">Creating websites and applications.</span>
+          <span className="hidden sm:inline">Developing websites, apps, and intelligent automations.</span>
         </h1>
 
         {/* Subtitle / Value proposition */}
