@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
 
         {/* Subtitle / Value proposition */}
         <p className="text-[17px] md:text-[20px] text-slate max-w-[660px] mx-auto leading-[1.55] tracking-[-0.374px] mb-10">
-          Helping businesses scale their presence online and automate critical operations with robust code, refined interfaces, and intelligent backends.
+          Scaling businesses and automating operations with refined interfaces and intelligent backends.
         </p>
 
         {/* CTA Pills */}
