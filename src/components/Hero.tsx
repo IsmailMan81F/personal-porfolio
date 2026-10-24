@@ -72,12 +72,12 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col items-center justify-center p-4 border-t sm:border-t-0 border-hairline-silver/60 dark:border-hairline-silver/30">
             <div className="flex items-center justify-center gap-1.5">
               <span className="text-[28px] md:text-[32px] font-semibold text-ink tracking-tight">
-                {PERSONAL_INFO.satisfiedClients}
+                {PERSONAL_INFO.projectsCount}
               </span>
               <FiCheckCircle className="w-5 h-5 text-apple-blue" />
             </div>
             <span className="text-[13px] text-slate tracking-[-0.12px] mt-1.5 text-center">
-              Satisfied Production Clients
+              Projects
             </span>
           </div>
         </div>

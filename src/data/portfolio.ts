@@ -35,7 +35,7 @@ export const PERSONAL_INFO = {
   yearOfStudy: "Year 3 of 5 — State Engineering Degree in Computer Science",
   location: "Jijel, Algeria",
   baccalaureateScore: "18.65 / 20",
-  satisfiedClients: 3,
+  projectsCount: "+20",
   socialLinks: {
     github: "https://github.com/IsmailMan81F",
     instagram: "https://www.instagram.com/ismail_meg81f/",
@@ -168,7 +168,7 @@ export const TIMELINE: Milestone[] = [
     title: "Independent Software Consultancy & Engineering",
     organization: "Freelance",
     description: "Designing and shipping bespoke web platforms, mobile solutions, and automation systems for clients worldwide.",
-    highlight: "3 Satisfied Clients"
+    highlight: "+20 Projects"
   }
 ];
 
